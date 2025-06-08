@@ -21,7 +21,7 @@ mkTarget {
         programs.wofi.style = with colors.withHashtag; ''
           window {
             background-color: ${base00};
-            opacity: ${opacity.applications};
+            opacity: ${builtins.toString opacity.applications};
             color: ${base05};
           }
 
