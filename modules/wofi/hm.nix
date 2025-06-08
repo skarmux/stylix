@@ -16,11 +16,12 @@ mkTarget {
       }
     )
     (
-      { colors }:
+      { colors, opacity }:
       {
         programs.wofi.style = with colors.withHashtag; ''
           window {
             background-color: ${base00};
+            opacity: ${opacity.overlays};
             color: ${base05};
           }
 
